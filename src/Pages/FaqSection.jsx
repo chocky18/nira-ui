@@ -6,7 +6,7 @@ const FaqSection = () => {
   const [activeId, setActiveId] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3000/faqs')  
+    fetch(`${import.meta.env.VITE_FAKE_API}/faqs`)
       .then((res) => res.json())
       .then((data) => setFaqs(data));
   }, []);
