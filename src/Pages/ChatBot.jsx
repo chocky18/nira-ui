@@ -62,7 +62,9 @@ const ChatBot = () => {
     formData.append("image_file", image);
 
     try {
-      const res = await axios.post(`${import.meta.env.VITE_API_URL}/chat`, formData);
+      // const res = await axios.post(`${import.meta.env.VITE_API_URL}/chat`, formData);
+      const res = await axios.post(`http://3.237.39.168:8000/chat`, formData);
+
 
       console.log("Server response:", res.data);
 

@@ -9,7 +9,8 @@ const ProductCard = () => {
   const [imageIndex, setImageIndex] = useState({});
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_FAKE_API}/products01`)
+    // fetch(`${import.meta.env.VITE_FAKE_API}/products01`)
+    fetch(`http://3.237.39.168:3000/products01`)
 
       .then((res) => res.json())
       .then((data) => {
