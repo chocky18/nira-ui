@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
-import fallbackImage from "../assets/img19.jpg";  
+import fallbackImage from "../assets/img19.jpg";
 
 const ProductCard = () => {
   const [products, setProducts] = useState([]);
@@ -9,7 +9,8 @@ const ProductCard = () => {
   const [imageIndex, setImageIndex] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:3000/products01")
+    fetch(`${import.meta.env.VITE_FAKE_API}/products01`)
+
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -91,9 +92,8 @@ const ProductCard = () => {
                       {images.map((_, index) => (
                         <span
                           key={index}
-                          className={`dot ${
-                            index === currentIndex ? "active" : ""
-                          }`}
+                          className={`dot ${index === currentIndex ? "active" : ""
+                            }`}
                         ></span>
                       ))}
                     </div>
