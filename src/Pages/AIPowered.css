@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap");
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* === AI Powered Section === */
+.ai-powered-wrapper {
+  background: #fad7b9; /* Soft peach background */
+  padding: 60px 30px;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.ai-powered-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.ai-powered-text {
+  max-width: 600px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.ai-powered-text h1,
+.ai-powered-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  margin-bottom: 16px;
+  color: #b53471;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.ai-powered-text ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  animation: fadeInUp 1.3s ease-in-out;
+}
+
+.ai-powered-btn {
+  background-color: #b53471;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: fadeInUp 1.6s ease-in-out;
+  font-weight: 600;
+}
+
+.ai-powered-btn:hover {
+  background-color: #92265a;
+  transform: scale(1.05);
+}
+
+/* === Updated Visual/Image Section === */
+.ai-powered-visual {
+  position: relative;
+  width: 400px; /* Increased width */
+  height: auto;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.ai-powered-visual img {
+  width: 100%;
+  height: auto;
+  max-height: 500px; /* Max height control */
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(181, 52, 113, 0.25);
+}
+
+/* === Tooltip === */
+.tooltip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #000;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0;
+  animation: bounceIn 1s ease forwards;
+  animation-delay: 2s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.tooltip .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.tooltip.red .dot {
+  background-color: #e63946;
+}
+
+.tooltip.black .dot {
+  background-color: #000;
+}
+
+.tooltip.pigmentation {
+  top: 20%;
+  left: -70px;
+}
+
+.tooltip.dryness {
+  top: 60%;
+  right: -80px;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .ai-powered-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ai-powered-visual {
+    width: 90%;
+    max-width: 360px;
+    margin-top: 30px;
+  }
+
+  .ai-powered-text ul {
+    text-align: left;
+  }
+
+  .ai-powered-text h1,
+  .ai-powered-text h2 {
+    font-size: 28px;
+  }
+}

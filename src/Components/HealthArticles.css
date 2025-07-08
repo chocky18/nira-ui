@@ -1,0 +1,87 @@
+.health-articles-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  gap: 30px;
+}
+
+.health-articles-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.health-articles-content h2 {
+  font-size: 26px;
+  color: #2e2e2e;
+  margin-bottom: 12px;
+}
+
+.health-articles-content p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+  max-width: 350px;
+}
+
+.see-all-btn {
+  background-color: #fdd5b6;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.see-all-btn:hover {
+  background-color: #d1625a;
+}
+
+.articles-cards {
+  flex: 2;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  min-width: 400px;
+}
+
+.article-card {
+  flex: 1;
+  min-width: 260px;
+}
+
+.article-card img {
+  width: 100%;
+  height: 160px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.article-card .category {
+  font-size: 13px;
+  color: #008080;
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.article-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2e2e2e;
+  margin-bottom: 6px;
+}
+
+.article-card .author {
+  font-size: 14px;
+  color: #555;
+}

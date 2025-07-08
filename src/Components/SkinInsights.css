@@ -1,0 +1,163 @@
+/* === Skin Insights Main Container === */
+.skin-insights-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px;
+  max-width: 1600px;
+  margin: auto;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #FBC6A4 50%, #F9B5AC 50%);
+  box-shadow: 0 4px 18px rgba(244, 173, 116, 0.15);
+  border: 3px solid #F7BFBF;
+  border-radius: 50% 0 50% 50%;
+  color: #221E1E;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === Image Section === */
+.image-section {
+  position: relative;
+  flex: 1;
+  max-width: 700px;
+  text-align: center;
+}
+
+.face-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(123, 4, 4, 0.15);
+}
+
+/* === Labels on Image === */
+.label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.label .circle {
+  width: 10px;
+  height: 10px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 8px;
+}
+
+.label .line {
+  width: 40px;
+  height: 2px;
+  background-color: black;
+  margin-right: 8px;
+}
+
+/* Specific Label Positions */
+.label.pigmentation {
+  top: 213px;
+  left: 92.5%;
+  transform: translate(-100%, -50%);
+}
+
+.label.acne {
+  top: 310px;
+  left: 330px;
+}
+
+/* === Text Section === */
+.text-section {
+  flex: 1;
+  max-width: 600px;
+  padding: 20px;
+  text-align: left;
+}
+
+.text-section h1 {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.text-section h1 span {
+  font-weight: 700;
+}
+
+.text-section h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.text-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgb(50, 48, 48);
+  margin-bottom: 30px;
+}
+
+/* === Try Now Button === */
+.try-now-btn {
+  background-color: #FDEBDD;          /* Soft Peach */
+  color: #3D2C29;                     /* Deep Brown Text */
+  border: 2px solid #F7CBA6;          /* Warm Beige Border */
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.try-now-btn:hover {
+  background-color: #FFEEE3;
+  transform: translateY(-4px) rotateX(3deg) rotateY(3deg);
+  box-shadow: 0 8px 20px rgba(255, 140, 122, 0.3);
+}
+
+/* Optional: Pressed state */
+.try-now-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* === Responsive for Mobile Devices === */
+@media (max-width: 768px) {
+  .skin-insights-container {
+    flex-direction: column;
+    border-radius: 24px;
+    padding: 40px 20px;
+  }
+
+  .text-section h1 {
+    font-size: 32px;
+  }
+
+  .text-section h3 {
+    font-size: 18px;
+  }
+
+  .text-section p {
+    font-size: 15px;
+  }
+
+  .label.pigmentation {
+    left: 85%;
+  }
+
+  .label.acne {
+    left: 60%;
+  }
+
+  .face-img {
+    max-width: 90%;
+  }
+}

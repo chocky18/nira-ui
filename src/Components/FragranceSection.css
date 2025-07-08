@@ -1,0 +1,120 @@
+/* === Fragrance Section Container === */
+.fragrance-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 5rem 3rem;
+  background: linear-gradient(90deg,
+      #f4ad74,
+      #d89ca0);
+  /* Warm coral to mauve */
+  color: white;
+  border-radius: 0 0 130px 130px;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
+}
+
+/* === Content Section === */
+.fragrance-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.fragrance-subtitle {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #fff5f0;
+}
+
+.fragrance-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+/* === Button === */
+.shop-button {
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  color: #d3644b;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+.shop-button:hover {
+  background-color: #f4ad74;
+  color: white;
+  border-radius: 40px;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* === Review Section === */
+.review {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #262523;
+}
+
+.stars {
+  color: #c3d5cb;
+  /* Updated to vibrant green (previous was #141615, too dark) */
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.review-text {
+  margin-bottom: 1rem;
+}
+
+.review-author {
+  font-size: 0.9rem;
+  color: #f7ede7;
+}
+
+/* === Video Section === */
+.fragrance-video {
+  flex: 1;
+  min-width: 300px;
+  max-width: 800px;
+}
+
+.fragrance-video video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  .fragrance-container {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    border-radius: 0 0 80px 80px;
+  }
+
+  .fragrance-heading {
+    font-size: 1.6rem;
+  }
+
+  .shop-button {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+
+  .fragrance-video {
+    max-width: 100%;
+  }
+}

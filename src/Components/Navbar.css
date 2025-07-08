@@ -1,0 +1,204 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Poppins:wght@400;600&display=swap");
+
+/* Header Wrapper */
+.header-wrapper {
+  width: 100%;
+  position: sticky;
+  top: 29px; /* Adjust to match topbar height */
+  z-index: 999;
+  background: rgba(255, 247, 240, 0.8); /* semi-transparent cream */
+  backdrop-filter: blur(10px);
+  color: #3a2f2f;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar Layout */
+.navbar {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  height: 60px;
+}
+
+.logo img {
+  height: 15vh;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  color: #3a2f2f;
+  font-weight: 500;
+  font-family: "Playfair Display", serif;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: #ff8c7a;
+}
+
+/* Navigation Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Cart Notification */
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: black;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  background-color: #fff;
+  display: none;
+  padding: 40px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  z-index: 999;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown Layout */
+.dropdown-columns {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  padding: 0 40px;
+}
+
+/* Dropdown Column */
+.column {
+  flex: 1;
+}
+
+.column h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.column p {
+  margin: 6px 0;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Promo Card */
+.promo-card {
+  max-width: 260px;
+  background: #f9f9f9;
+  padding: 16px;
+  text-align: left;
+  border-radius: 8px;
+}
+
+.promo-card .tag {
+  font-size: 12px;
+  background: #000;
+  color: #fff;
+  padding: 4px 8px;
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.promo-card h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #111;
+}
+
+.promo-card .orange {
+  color: #f60;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.promo-card .desc-title {
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.promo-card .desc {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.buy-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}

@@ -1,0 +1,173 @@
+{
+  "products01": [
+    {
+      "id": 2,
+      "title": "SPF 50 Sunscreen",
+      "description": "Sun protection, UV exposure / damage",
+      "price": 399,
+      "discountedPrice": 379,
+      "rating": 4,
+      "images": [
+        "https://example.com/image2.jpg",
+        "https://images.plixlife.com/products/484-85835d3c25f24ebf9695a6075fa415cf.jpg?auto=format&fit=max&w=1200",
+        "https://cdn.shopify.com/s/files/1/0023/9953/5204/files/SL_Salicylic_Acid_Blog-01.jpg?v=1617602216",
+        "https://www.skinbeautysolutions.com/wp-content/uploads/2018/09/Infographic-Salicylic-Acid-skin-peel-2-serum-wart-remover-vitamin-cream-c-retinol-skin-chemical-peel-at-home-scaled.jpg",
+        "https://www.skinceuticals-me.com/dw/image/v2/BGSJ_PRD/on/demandware.static/-/Sites-skinceuticals-ng-master-catalog/default/dwda2a0bf8/pdpimages/BLEMISH-AGE(INT)/22_0429_SKC_PDP22_CRT_B+AD_INTL_CUSTOMER_REVIEW_2400x2400.jpg?sw=375&sfrm=jpg&q=70",
+        "https://ahsanstore.pk/wp-content/uploads/2024/02/The-Ordinary-Salicylic-Acid-2-Anhydrous-Solution-Review.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "SPF 50 Sunscreen",
+      "description": "Sun protection, UV exposure / damage",
+      "price": 399,
+      "discountedPrice": 379,
+      "rating": 4,
+      "images": [
+        "https://example.com/image2.jpg",
+        "https://images.plixlife.com/products/484-85835d3c25f24ebf9695a6075fa415cf.jpg?auto=format&fit=max&w=1200",
+        "https://cdn.shopify.com/s/files/1/0023/9953/5204/files/SL_Salicylic_Acid_Blog-01.jpg?v=1617602216",
+        "https://www.skinbeautysolutions.com/wp-content/uploads/2018/09/Infographic-Salicylic-Acid-skin-peel-2-serum-wart-remover-vitamin-cream-c-retinol-skin-chemical-peel-at-home-scaled.jpg",
+        "https://www.skinceuticals-me.com/dw/image/v2/BGSJ_PRD/on/demandware.static/-/Sites-skinceuticals-ng-master-catalog/default/dwda2a0bf8/pdpimages/BLEMISH-AGE(INT)/22_0429_SKC_PDP22_CRT_B+AD_INTL_CUSTOMER_REVIEW_2400x2400.jpg?sw=375&sfrm=jpg&q=70",
+        "https://ahsanstore.pk/wp-content/uploads/2024/02/The-Ordinary-Salicylic-Acid-2-Anhydrous-Solution-Review.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "SPF 50 Sunscreen",
+      "description": "Sun protection, UV exposure / damage",
+      "price": 399,
+      "discountedPrice": 379,
+      "rating": 4,
+      "images": [
+        "https://example.com/image2.jpg",
+        "https://images.plixlife.com/products/484-85835d3c25f24ebf9695a6075fa415cf.jpg?auto=format&fit=max&w=1200",
+        "https://cdn.shopify.com/s/files/1/0023/9953/5204/files/SL_Salicylic_Acid_Blog-01.jpg?v=1617602216",
+        "https://www.skinbeautysolutions.com/wp-content/uploads/2018/09/Infographic-Salicylic-Acid-skin-peel-2-serum-wart-remover-vitamin-cream-c-retinol-skin-chemical-peel-at-home-scaled.jpg",
+        "https://www.skinceuticals-me.com/dw/image/v2/BGSJ_PRD/on/demandware.static/-/Sites-skinceuticals-ng-master-catalog/default/dwda2a0bf8/pdpimages/BLEMISH-AGE(INT)/22_0429_SKC_PDP22_CRT_B+AD_INTL_CUSTOMER_REVIEW_2400x2400.jpg?sw=375&sfrm=jpg&q=70",
+        "https://ahsanstore.pk/wp-content/uploads/2024/02/The-Ordinary-Salicylic-Acid-2-Anhydrous-Solution-Review.jpg"
+      ]
+    },
+
+    {
+      "id": 2,
+      "title": "SPF 50 Sunscreen",
+      "description": "Sun protection, UV exposure / damage",
+      "price": 399,
+      "discountedPrice": 379,
+      "rating": 4,
+      "images": [
+        "https://example.com/image2.jpg",
+        "https://images.plixlife.com/products/484-85835d3c25f24ebf9695a6075fa415cf.jpg?auto=format&fit=max&w=1200",
+        "https://cdn.shopify.com/s/files/1/0023/9953/5204/files/SL_Salicylic_Acid_Blog-01.jpg?v=1617602216",
+        "https://www.skinbeautysolutions.com/wp-content/uploads/2018/09/Infographic-Salicylic-Acid-skin-peel-2-serum-wart-remover-vitamin-cream-c-retinol-skin-chemical-peel-at-home-scaled.jpg",
+        "https://www.skinceuticals-me.com/dw/image/v2/BGSJ_PRD/on/demandware.static/-/Sites-skinceuticals-ng-master-catalog/default/dwda2a0bf8/pdpimages/BLEMISH-AGE(INT)/22_0429_SKC_PDP22_CRT_B+AD_INTL_CUSTOMER_REVIEW_2400x2400.jpg?sw=375&sfrm=jpg&q=70",
+        "https://ahsanstore.pk/wp-content/uploads/2024/02/The-Ordinary-Salicylic-Acid-2-Anhydrous-Solution-Review.jpg"
+      ]
+    }
+  ],
+  "Launches": [
+    {
+      "id": 2,
+      "title": "SPF 50 Sunscreen",
+      "description": "Sun protection, UV exposure / damage",
+      "price": 399,
+      "discountedPrice": 379,
+      "rating": 4,
+       "images": [
+        "https://example.com/image2.jpg",
+        "https://images.plixlife.com/products/484-85835d3c25f24ebf9695a6075fa415cf.jpg?auto=format&fit=max&w=1200",
+        "https://cdn.shopify.com/s/files/1/0023/9953/5204/files/SL_Salicylic_Acid_Blog-01.jpg?v=1617602216",
+        "https://www.skinbeautysolutions.com/wp-content/uploads/2018/09/Infographic-Salicylic-Acid-skin-peel-2-serum-wart-remover-vitamin-cream-c-retinol-skin-chemical-peel-at-home-scaled.jpg",
+        "https://www.skinceuticals-me.com/dw/image/v2/BGSJ_PRD/on/demandware.static/-/Sites-skinceuticals-ng-master-catalog/default/dwda2a0bf8/pdpimages/BLEMISH-AGE(INT)/22_0429_SKC_PDP22_CRT_B+AD_INTL_CUSTOMER_REVIEW_2400x2400.jpg?sw=375&sfrm=jpg&q=70",
+        "https://ahsanstore.pk/wp-content/uploads/2024/02/The-Ordinary-Salicylic-Acid-2-Anhydrous-Solution-Review.jpg"
+      ]
+    },
+
+    {
+      "id": 2,
+      "title": "SPF 50 Sunscreen",
+      "description": "Sun protection, UV exposure / damage",
+      "price": 399,
+      "discountedPrice": 379,
+      "rating": 4,
+      "images": [
+        "https://example.com/image2.jpg",
+        "https://images.plixlife.com/products/484-85835d3c25f24ebf9695a6075fa415cf.jpg?auto=format&fit=max&w=1200",
+        "https://cdn.shopify.com/s/files/1/0023/9953/5204/files/SL_Salicylic_Acid_Blog-01.jpg?v=1617602216",
+        "https://www.skinbeautysolutions.com/wp-content/uploads/2018/09/Infographic-Salicylic-Acid-skin-peel-2-serum-wart-remover-vitamin-cream-c-retinol-skin-chemical-peel-at-home-scaled.jpg",
+        "https://www.skinceuticals-me.com/dw/image/v2/BGSJ_PRD/on/demandware.static/-/Sites-skinceuticals-ng-master-catalog/default/dwda2a0bf8/pdpimages/BLEMISH-AGE(INT)/22_0429_SKC_PDP22_CRT_B+AD_INTL_CUSTOMER_REVIEW_2400x2400.jpg?sw=375&sfrm=jpg&q=70",
+        "https://ahsanstore.pk/wp-content/uploads/2024/02/The-Ordinary-Salicylic-Acid-2-Anhydrous-Solution-Review.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "SPF 50 Sunscreen",
+      "description": "Sun protection, UV exposure / damage",
+      "price": 399,
+      "discountedPrice": 379,
+     "images": [
+        "https://example.com/image2.jpg",
+        "https://images.plixlife.com/products/484-85835d3c25f24ebf9695a6075fa415cf.jpg?auto=format&fit=max&w=1200",
+        "https://cdn.shopify.com/s/files/1/0023/9953/5204/files/SL_Salicylic_Acid_Blog-01.jpg?v=1617602216",
+        "https://www.skinbeautysolutions.com/wp-content/uploads/2018/09/Infographic-Salicylic-Acid-skin-peel-2-serum-wart-remover-vitamin-cream-c-retinol-skin-chemical-peel-at-home-scaled.jpg",
+        "https://www.skinceuticals-me.com/dw/image/v2/BGSJ_PRD/on/demandware.static/-/Sites-skinceuticals-ng-master-catalog/default/dwda2a0bf8/pdpimages/BLEMISH-AGE(INT)/22_0429_SKC_PDP22_CRT_B+AD_INTL_CUSTOMER_REVIEW_2400x2400.jpg?sw=375&sfrm=jpg&q=70",
+        "https://ahsanstore.pk/wp-content/uploads/2024/02/The-Ordinary-Salicylic-Acid-2-Anhydrous-Solution-Review.jpg"
+      ]
+    },
+
+    {
+      "id": 2,
+      "title": "SPF 50 Sunscreen",
+      "description": "Sun protection, UV exposure / damage",
+      "price": 399,
+      "discountedPrice": 379,
+      "rating": 4,
+      "images": [
+        "https://example.com/image2.jpg",
+        "https://images.plixlife.com/products/484-85835d3c25f24ebf9695a6075fa415cf.jpg?auto=format&fit=max&w=1200",
+        "https://cdn.shopify.com/s/files/1/0023/9953/5204/files/SL_Salicylic_Acid_Blog-01.jpg?v=1617602216",
+        "https://www.skinbeautysolutions.com/wp-content/uploads/2018/09/Infographic-Salicylic-Acid-skin-peel-2-serum-wart-remover-vitamin-cream-c-retinol-skin-chemical-peel-at-home-scaled.jpg",
+        "https://www.skinceuticals-me.com/dw/image/v2/BGSJ_PRD/on/demandware.static/-/Sites-skinceuticals-ng-master-catalog/default/dwda2a0bf8/pdpimages/BLEMISH-AGE(INT)/22_0429_SKC_PDP22_CRT_B+AD_INTL_CUSTOMER_REVIEW_2400x2400.jpg?sw=375&sfrm=jpg&q=70",
+        "https://ahsanstore.pk/wp-content/uploads/2024/02/The-Ordinary-Salicylic-Acid-2-Anhydrous-Solution-Review.jpg"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "question": "What is Skin Insights?",
+      "answer": "Skin Insights by Minimalist is a personalized skincare guide. Our tool analyzes your skin and provides custom recommendations for healthier and radiant skin."
+    },
+    {
+      "id": 2,
+      "question": "Is Skin Insights the right tool for me?",
+      "answer": "Yes, Skin Insights is designed for anyone looking to improve their skincare with AI-powered personalized analysis."
+    },
+    {
+      "id": 3,
+      "question": "How to use Skin Insights?",
+      "answer": "Just upload a clear picture of your face and the tool will guide you through analysis and personalized skincare suggestions."
+    },
+    {
+      "id": 4,
+      "question": "How long does it take to use Skin Insights?",
+      "answer": "It typically takes less than a minute to analyze your photo and generate recommendations."
+    },
+    {
+      "id": 5,
+      "question": "Do you have to download an app to use Skin Insights?",
+      "answer": "No, it’s a fully web-based tool. No app download is necessary."
+    },
+    {
+      "id": 6,
+      "question": "Can I save my results?",
+      "answer": "Yes, you can save or download your results as a PDF."
+    },
+    {
+      "id": 7,
+      "question": "Is my picture stored?",
+      "answer": "No, your picture is only used temporarily for analysis and is not stored."
+    }
+  ]
+}

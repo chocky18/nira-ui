@@ -1,0 +1,89 @@
+.skin-profile-wrapper {
+  background: linear-gradient(90deg, #fff7f0, #fde4cf);
+  font-family: "Poppins", sans-serif;
+  color: #3d2c29;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.skin-profile-header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.description {
+  margin: 10px 0 30px;
+  font-size: 16px;
+  color: #5e4e4b;
+}
+
+.skin-profile-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.skin-btn {
+  padding: 10px 20px;
+  border: 2px solid #f7cba6;
+  background-color: transparent;
+  color: #3d2c29;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skin-btn.active,
+.skin-btn:hover {
+  background-color: #f4ad74;
+  color: white;
+}
+
+.skin-profile-image-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.skin-profile-image {
+  width: 95vh;
+  height: 85vh;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);  
+}
+
+.label01 {
+  position: absolute;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: white;
+  background: #d3644b;
+  padding: 6px 14px;
+  border-radius: 20px;
+  z-index: 10;
+  top: -20px;
+}
+
+.before {
+  top: 10px;
+  left: 7%;
+}
+
+.after {
+  top: 10px;
+  right: 7%;
+}

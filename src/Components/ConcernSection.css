@@ -1,0 +1,70 @@
+.concern-section {
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.slider-track {
+  display: flex;
+  animation: scroll 120s linear infinite;
+  width: max-content;
+  animation-play-state: running; /* default */
+}
+
+/* Pause animation on hover */
+.slider-wrapper:hover .slider-track {
+  animation-play-state: paused;
+}
+/* Slider container */
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+/* Single card */
+.concern-card {
+  flex: 0 0 auto;
+  width: 310px;
+  margin: 0 20px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+.concern-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.6s ease;
+}
+.concern-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.concern-card:hover .concern-title {
+  text-decoration: underline;
+}
+.concern-title {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

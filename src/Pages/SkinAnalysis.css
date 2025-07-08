@@ -1,0 +1,143 @@
+/* === Wrapper Layout === */
+.skin-analysis-wrapper {
+  padding: 60px 20px;
+  background-color: #fff7f0; /* Updated background */
+  text-align: center;
+}
+
+/* === Top Header Section === */
+.skin-analysis-header {
+  max-width: 350px;
+  margin: 0 auto 50px;
+  border: 1px solid #110000;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff; /* Optional: keeps header contrast */
+  border-radius: 12px;
+}
+
+/* === Header Text === */
+.skin-analysis-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.skin-analysis-header h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.skin-analysis-header p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* === Button Styling === */
+.btn-primary {
+  background-color: #c94f7c;
+  color: #fff;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #b53471;
+}
+
+/* === Step Cards Container === */
+.skin-analysis-image-box {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  max-width: 600px;
+  margin: -22px auto;
+}
+
+/* === Individual Step Card === */
+.step-card {
+  width: 320px;
+  background-color: #fff; /* clean card background */
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.step-card:nth-child(odd) {
+  align-self: flex-start;
+}
+
+.step-card:nth-child(even) {
+  align-self: flex-end;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+}
+
+.step-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.step-content {
+  padding: 16px;
+  background-color: #fff7f0; /* soft peach tone inside card */
+}
+
+.step-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #888;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.step-content h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.step-content p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* === Responsive Styling === */
+@media (max-width: 768px) {
+  .skin-analysis-wrapper {
+    padding: 30px 15px;
+  }
+
+  .skin-analysis-header {
+    padding: 10px;
+    height: auto;
+  }
+
+  .skin-analysis-image-box {
+    align-items: center;
+  }
+
+  .step-card {
+    width: 90%;
+    align-self: center;
+  }
+}

@@ -1,0 +1,58 @@
+.related-container01 {
+  padding: 20px;
+  background-color: #111;
+  color: white;
+}
+
+.related-title01 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.related-grid01 {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.related-card01 {
+  width: 200px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.2s ease;
+}
+
+.related-card01:hover {
+  transform: scale(1.03);
+}
+
+.related-image01 {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.related-title {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.related-price {
+  font-weight: bold;
+}
+
+.related-original {
+  text-decoration: line-through;
+  color: #888;
+  font-weight: normal;
+  margin-left: 4px;
+}
+
+.related-rating {
+  color: #ffd700;
+  margin-top: 5px;
+}
