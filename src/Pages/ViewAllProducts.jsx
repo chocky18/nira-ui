@@ -87,19 +87,20 @@ const ViewAllProducts = () => {
           ) : (
             <div className="product-grid01">
               {products.map((prod) => (
-                <div className="product-card01" key={prod._id}>
+                <div className="product-card01" key={prod.id}>
                   <img
-                    src={prod.imageUrl}
+                    src={prod.images?.[0] || "https://via.placeholder.com/200"}
                     alt={prod.title}
                     className="product-image01"
                   />
                   <h3 className="product-title01">{prod.title}</h3>
                   <p className="product-price01">
-                    ₹{prod.price}{" "}
-                    <span className="original-price01">₹{prod.originalPrice}</span>
+                    ₹{prod.discountedPrice}{" "}
+                    <span className="original-price01">₹{prod.price}</span>
                   </p>
                   <p className="product-rating01">⭐ {prod.rating}</p>
                 </div>
+
               ))}
             </div>
           )}
