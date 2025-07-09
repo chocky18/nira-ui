@@ -63,7 +63,8 @@ const ChatBot = () => {
 
     try {
       // const res = await axios.post(`${import.meta.env.VITE_API_URL}/chat`, formData);
-      const res = await axios.post("http://3.237.39.168:8000/chat", formData);
+      const res = await axios.post("https://nira-ai-chat.duckdns.org/chat", formData);
+
 
 
 
