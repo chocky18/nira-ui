@@ -31,13 +31,7 @@ const categories = [
       "https://www.hhealthcare.net/wp-content/uploads/2022/02/Lip-care.jpg",
     link: "/category/lip-care",
   },
-  {
-    title: "Eye Care",
-    subtitle: "Eye Care",
-    image:
-      "https://www.westernlasereye.com/wp-content/uploads/shutterstock_1565916823-1.jpg",
-    link: "/category/eye-care",
-  },
+
 ];
 
 const CategoryCarousel = () => {
