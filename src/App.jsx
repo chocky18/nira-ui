@@ -43,7 +43,7 @@ function App() {
               <HealthConsultation />
               <BookAppointment />
               <HealthArticles />
-              <Launches />
+              {/* <Launches /> */}
               <FragranceSection />
               <CareSection />
               <CustomerReviews />
