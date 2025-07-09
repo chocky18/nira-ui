@@ -26,7 +26,7 @@ const ViewAllProducts = () => {
     const fetchProducts = async () => {
       try {
         // const res = await fetch(`${import.meta.env.VITE_FAKE_API}/products01`);
-        const res = await fetch(`http://3.237.39.168:3000/products01`);
+        const res = await fetch("https://nira-db.duckdns.org/products01");
 
         const data = await res.json();
         console.log("✅ Products from backend:", data);

@@ -7,7 +7,7 @@ const RelatedProducts = ({ category = "Skin" }) => {
   useEffect(() => {
     const fetchRelated = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_FAKE_API}/products01`);
+        const res = await fetch("https://nira-db.duckdns.org/products01");
 
 
         const data = await res.json();
