@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
-import fallbackImage from "../assets/img19.jpg";
+
 
 const Launches = () => {
   const [products, setProducts] = useState([]);
@@ -9,7 +9,7 @@ const Launches = () => {
   const [imageIndex, setImageIndex] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:3000/Launches")
+    fetch("https://nira-db.duckdns.org/Launches")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -93,9 +93,8 @@ const Launches = () => {
                       {images.map((_, index) => (
                         <span
                           key={index}
-                          className={`dot ${
-                            index === currentIndex ? "active" : ""
-                          }`}
+                          className={`dot ${index === currentIndex ? "active" : ""
+                            }`}
                         ></span>
                       ))}
                     </div>

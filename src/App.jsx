@@ -15,23 +15,21 @@ import ViewAllProducts from "./Pages/ViewAllProducts";
 import TryNow from "./Pages/TryNow";
 import ChatBot from "./Pages/ChatBot";
 import LoginPage from "./Pages/LoginPage";
-import "./App.css";
 import HealthConsultation from "./Components/HealthConsultation";
 import BookAppointment from "./Components/BookAppointment";
 import HealthArticles from "./Components/HealthArticles";
+import ErrorBoundary from "./Components/ErrorBoundary"; // make sure this file exists
+import "./App.css";
 
 function App() {
   const location = useLocation();
-
   const isChatbotPage = location.pathname === "/chatbot";
-  // const isLoginPage = location.pathname === "/login";
 
   return (
     <div className="App">
       {!isChatbotPage && <TopBar />}
       {!isChatbotPage && <Navbar />}
 
-      {/* Routes */}
       <Routes>
         <Route
           path="/"
@@ -54,7 +52,14 @@ function App() {
         />
         <Route path="/products" element={<ViewAllProducts />} />
         <Route path="/try-now" element={<TryNow />} />
-        <Route path="/chatbot" element={<ChatBot />} />
+        <Route
+          path="/chatbot"
+          element={
+            <ErrorBoundary>
+              <ChatBot />
+            </ErrorBoundary>
+          }
+        />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
 

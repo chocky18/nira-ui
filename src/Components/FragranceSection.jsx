@@ -1,5 +1,6 @@
 import React from 'react';
 import './FragranceSection.css'
+// import videoSrc from '../assets/video_description.mp4';
 
 const FragranceSection = () => {
   return (
@@ -25,10 +26,11 @@ const FragranceSection = () => {
 
       <div className="fragrance-video">
         <video autoPlay loop muted playsInline>
-          <source src="/video/fragrance.mp4" type="video/mp4" />
+          <source src="/video/video_description-VEED.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
+
     </div>
   );
 };

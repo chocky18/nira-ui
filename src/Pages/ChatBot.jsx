@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import axios from "axios";
-import logo from "../assets/logo (2).png";
 import {
   FaSearch,
   FaCommentDots,
@@ -15,27 +14,21 @@ import "./ChatBot.css";
 const ChatBot = () => {
   const [message, setMessage] = useState("");
   const [image, setImage] = useState(null);
+  const [previewURL, setPreviewURL] = useState(null);
   const [response, setResponse] = useState("");
   const [metrics, setMetrics] = useState({});
   const [steps, setSteps] = useState([]);
   const [responseImages, setResponseImages] = useState(null);
   const [greeting, setGreeting] = useState("");
 
-
   const responseRef = useRef(null);
 
   useEffect(() => {
     const currentHour = new Date().getHours();
-    if (currentHour < 12) {
-      setGreeting("Good Morning");
-    } else if (currentHour < 18) {
-      setGreeting("Good Afternoon");
-    } else {
-      setGreeting("Good Evening");
-    }
+    if (currentHour < 12) setGreeting("Good Morning");
+    else if (currentHour < 18) setGreeting("Good Afternoon");
+    else setGreeting("Good Evening");
   }, []);
-
-
 
   useEffect(() => {
     if (responseRef.current) {
@@ -44,7 +37,27 @@ const ChatBot = () => {
   }, [response, metrics, steps]);
 
   const handleImageUpload = (e) => {
-    setImage(e.target.files[0]);
+    const file = e.target.files[0];
+    if (!file) return;
+
+    // Validate file type
+    const validTypes = ["image/jpeg", "image/png", "image/jpg"];
+    if (!validTypes.includes(file.type)) {
+      alert("Please upload a JPG or PNG image.");
+      return;
+    }
+
+    // Validate file size (min 10 KB)
+    if (file.size < 10 * 1024) {
+      alert("Image is too small. Please upload an image larger than 10 KB.");
+      return;
+    }
+
+    // Set image & preview
+    setImage(file);
+    const reader = new FileReader();
+    reader.onloadend = () => setPreviewURL(reader.result);
+    reader.readAsDataURL(file);
   };
 
   const handleMessageChange = (e) => {
@@ -61,27 +74,35 @@ const ChatBot = () => {
     formData.append("message", message);
     formData.append("image_file", image);
 
+    console.log("🖼️ Selected image:", image);
+    console.log("Type:", image?.type, "Size:", image?.size);
+
     try {
-      // const res = await axios.post(`${import.meta.env.VITE_API_URL}/chat`, formData);
       const res = await axios.post("https://nira-ai-chat.duckdns.org/chat", formData);
 
+      console.log("🌐 Full Backend Response:", res.data);
 
+      setResponse(res.data.response ?? "");
+      setMetrics(typeof res.data.metrics === "object" ? res.data.metrics : {});
+      setSteps(Array.isArray(res.data.steps) ? res.data.steps : []);
 
-
-      console.log("Server response:", res.data);
-
-      setResponse(res.data.response);
-      setMetrics(res.data.metrics);
-      setSteps(res.data.steps);
-      setResponseImages({
-        original: res.data.images?.original || null,
-        enhanced: res.data.images?.enhanced || null,
-        masks: res.data.images?.masks || {},
-        cv2_filters: res.data.images?.cv2_filters || {},
-      });
+      const { images } = res.data;
+      if (images) {
+        setResponseImages({
+          original: images.original || null,
+          enhanced: images.enhanced || null,
+          masks: images.masks || {},
+          cv2_filters: images.cv2_filters || {},
+        });
+      } else {
+        setResponseImages(null);
+      }
     } catch (error) {
-      console.error("Error during request:", error);
+      console.error("❌ Error during request:", error);
       setResponse("Error: Could not connect to backend.");
+      setMetrics({});
+      setSteps([]);
+      setResponseImages(null);
     }
   };
 
@@ -90,7 +111,7 @@ const ChatBot = () => {
       {/* Sidebar */}
       <div className="sidebar-container">
         <div className="sidebar-logo">
-          <img src={logo} alt="logo" />
+          <img src="/images/logo.png" alt="Logo" />
         </div>
         <div className="sidebar-search">
           <FaSearch className="search-icon" />
@@ -102,22 +123,18 @@ const ChatBot = () => {
           <p><FaHistory /> History</p>
         </div>
         <div className="sidebar-profile">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-            alt="Profile"
-          />
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile" />
           <span className="collapse-icon">⏴</span>
         </div>
       </div>
 
       {/* Main Chat UI */}
       <div className="chatbot-container">
-        <div className="chatbot-logo">⚡{greeting}</div>
+        <div className="chatbot-logo">⚡ {greeting}</div>
 
         <div className="chatbot-response-container">
           <div className="chatbot-text-output" ref={responseRef}>
             <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-              {/* LEFT COLUMN: RESPONSE */}
               <div style={{ flex: "1 1 45%", minWidth: "300px" }}>
                 {response && (
                   <div className="chat-section">
@@ -125,11 +142,18 @@ const ChatBot = () => {
                     <p>{response}</p>
                   </div>
                 )}
+
+                {/* Image Preview */}
+                {previewURL && (
+                  <div className="chat-section">
+                    <h3>🖼 Preview:</h3>
+                    <img src={previewURL} alt="Preview" className="chat-image" />
+                  </div>
+                )}
               </div>
 
-              {/* RIGHT COLUMN: METRICS, STAGES, IMAGES */}
               <div style={{ flex: "1 1 45%", minWidth: "300px" }}>
-                {Object.keys(metrics).length > 0 && (
+                {metrics && Object.keys(metrics).length > 0 && (
                   <div className="chat-section">
                     <h3>🧪 Metrics:</h3>
                     {Object.entries(metrics).map(([region, regionMetrics]) => (
@@ -137,16 +161,15 @@ const ChatBot = () => {
                         <h4 className="text-lg font-bold capitalize mb-2">{region}</h4>
                         <ul className="metric-list space-y-1">
                           {Object.entries(regionMetrics).map(([metric, value]) => {
-                            if (typeof value === "object" && value !== null && "severity" in value) {
-                              const severity = value.severity;
-                              let severityClass = "";
-                              if (severity === "mild") severityClass = "badge mild";
-                              else if (severity === "moderate") severityClass = "badge moderate";
-                              else if (severity === "severe") severityClass = "badge severe";
+                            if (typeof value === "object" && "severity" in value) {
+                              const severityClass =
+                                value.severity === "mild" ? "badge mild" :
+                                  value.severity === "moderate" ? "badge moderate" :
+                                    "badge severe";
                               return (
                                 <li key={metric} className="flex justify-between items-center">
                                   <span className="capitalize">{metric}</span>
-                                  <span className={severityClass}>{severity}</span>
+                                  <span className={severityClass}>{value.severity}</span>
                                 </li>
                               );
                             } else {
@@ -179,21 +202,18 @@ const ChatBot = () => {
                 {responseImages && (
                   <div className="chatbot-image-output">
                     <h3>🖼 Images:</h3>
-
                     {responseImages.original && (
                       <div className="image-preview-block">
                         <p><strong>Original Image:</strong></p>
                         <img src={`data:image/jpeg;base64,${responseImages.original}`} alt="Original" className="chat-image" />
                       </div>
                     )}
-
                     {responseImages.enhanced && (
                       <div className="image-preview-block">
                         <p><strong>Enhanced Image:</strong></p>
                         <img src={`data:image/jpeg;base64,${responseImages.enhanced}`} alt="Enhanced" className="chat-image" />
                       </div>
                     )}
-
                     {responseImages.masks && Object.keys(responseImages.masks).length > 0 && (
                       <div className="image-preview-block">
                         <p><strong>Face Parsing Masks:</strong></p>
@@ -207,7 +227,6 @@ const ChatBot = () => {
                         </div>
                       </div>
                     )}
-
                     {responseImages.cv2_filters && Object.keys(responseImages.cv2_filters).length > 0 && (
                       <div className="chat-section">
                         <h3>🧪 Region-wise CV2 Transformations:</h3>
@@ -219,7 +238,11 @@ const ChatBot = () => {
                                 filters[key] && (
                                   <div key={key} className="transform-step">
                                     <p>{key}</p>
-                                    <img src={`data:image/png;base64,${filters[key]}`} alt={`${region}-${key}`} className="chat-image" />
+                                    <img
+                                      src={`data:image/png;base64,${filters[key]}`}
+                                      alt={`${region}-${key}`}
+                                      className="chat-image"
+                                    />
                                   </div>
                                 )
                               )}
@@ -235,7 +258,7 @@ const ChatBot = () => {
           </div>
         </div>
 
-        {/* Input Box */}
+        {/* Input */}
         <div className="chatbot-input-box">
           <input
             type="text"
@@ -256,7 +279,9 @@ const ChatBot = () => {
             <button className="pill-button"><FaLightbulb /> Think</button>
             <div className="grow" />
             <button className="text-button">NIRA AI▼</button>
-            <button className="circle-button send" onClick={handleSubmit}><FaArrowUp /></button>
+            <button className="circle-button send" onClick={handleSubmit}>
+              <FaArrowUp />
+            </button>
           </div>
         </div>
       </div>
@@ -265,4 +290,3 @@ const ChatBot = () => {
 };
 
 export default ChatBot;
-

@@ -3,14 +3,14 @@ import { FaStar, FaSearch, FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 // import logo from "../assets/log(2).png";
-import logo from "../assets/logo (2).png";
+// import logo from "../assets/logo (2).png";
 
 const Navbar = () => {
   return (
     <div className="header-wrapper">
       <div className="navbar">
         <div className="logo">
-          <img src={logo} alt="logo" />
+          <img src="/images/logo.png" alt="Logo" />
         </div>
         <ul className="nav-links">
           <li>Shop</li>

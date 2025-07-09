@@ -37,7 +37,7 @@ const Footer = () => {
           <h4>Contact Us</h4>
           <p>
             Need help fast? Fill out our form or email <br />
-            <a href="mailto:help@beminimalist.co">help@nirmatalist.co</a>
+            <a href="o">help@nira-ai.co</a>
           </p>
           <div className="social-icons">
             <HiOutlineMail />

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
-import fallbackImage from "../assets/img19.jpg";
 
 const ProductCard = () => {
   const [products, setProducts] = useState([]);
@@ -9,9 +8,7 @@ const ProductCard = () => {
   const [imageIndex, setImageIndex] = useState({});
 
   useEffect(() => {
-    // fetch(`${import.meta.env.VITE_FAKE_API}/products01`)
     fetch("https://nira-db.duckdns.org/products01")
-
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -54,8 +51,9 @@ const ProductCard = () => {
         <div className="product-list">
           {products.map((product, idx) => {
             const currentIndex = imageIndex[idx] || 0;
-            const images = Array.isArray(product.images) ? product.images : [fallbackImage];
-            const totalImages = images.length;
+            const totalImages = 3; // You can customize based on how many images each product has
+
+            const imagePath = `/images/product-${product.id}-${currentIndex}.jpg`;
 
             return (
               <div className="product-card" key={product.id}>
@@ -71,12 +69,12 @@ const ProductCard = () => {
                     )}
 
                     <img
-                      src={images[currentIndex]}
+                      src={imagePath}
                       alt={product.title}
                       className="product-image"
                       onError={(e) => {
                         e.target.onerror = null;
-                        e.target.src = fallbackImage;
+                        e.target.src = "/images/img19.jpg";
                       }}
                     />
 
@@ -90,11 +88,10 @@ const ProductCard = () => {
                     )}
 
                     <div className="dots">
-                      {images.map((_, index) => (
+                      {Array.from({ length: totalImages }).map((_, index) => (
                         <span
                           key={index}
-                          className={`dot ${index === currentIndex ? "active" : ""
-                            }`}
+                          className={`dot ${index === currentIndex ? "active" : ""}`}
                         ></span>
                       ))}
                     </div>

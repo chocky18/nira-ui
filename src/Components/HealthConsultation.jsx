@@ -1,37 +1,30 @@
 import React from "react";
 import "./HealthConsultation.css";
-import clinicImg1 from '../assets/acne.jpg';
-import clinicImg2 from '../assets/darkspots1.jpg';
-import clinicImg3 from '../assets/dryness1.jpg';
-import clinicImg4 from '../assets/clinic3.jpg';
-import clinicImg5 from '../assets/clinic1.jpg';
-import clinicImg6 from '../assets/doctor1.jpg';
-
 
 const consultationData = [
   {
     title: "Acne, Pimples & Breakouts",
-    icon: clinicImg1
+    icon: "/images/acne.jpg"
   },
   {
     title: "Pigmentation & Dark Spots",
-    icon: clinicImg2
+    icon: "/images/darkspots1.jpg"
   },
   {
     title: "Skin Dryness & Itching",
-    icon: clinicImg3
+    icon: "/images/dryness1.jpg"
   },
   {
     title: "Anti-Aging & Wrinkles",
-    icon: clinicImg4
+    icon: "/images/clinic3.jpg"
   },
   {
     title: "Sensitive Skin Reactions",
-    icon: clinicImg5
+    icon: "/images/clinic1.jpg"
   },
   {
     title: "Book a Derma Consultation",
-    icon: clinicImg6
+    icon: "/images/doctor1.jpg"
   },
 ];
 
