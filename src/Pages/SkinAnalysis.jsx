@@ -1,6 +1,7 @@
 import React from "react";
 import "./SkinAnalysis.css";
 import AIPowered from "./AIPowered";
+import { Link } from 'react-router-dom';
 
 const SkinAnalysis = () => {
   return (
@@ -15,7 +16,10 @@ const SkinAnalysis = () => {
             <br />
             <strong>Assess, Capture & Get Routine.</strong>
           </p>
-          <button className="btn-primary">Start Now</button>
+
+          <Link to="/chatbot">
+            <button className="btn-primary">Start Now</button>
+          </Link>
         </div>
 
         {/* Step Cards (below text) */}

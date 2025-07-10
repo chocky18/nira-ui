@@ -1,6 +1,8 @@
 import React from "react";
 import "./PictureInstructions.css";
 import FaqSection from "./FaqSection";
+import { Link } from 'react-router-dom';
+
 const PictureInstructions = () => {
   return (
     <>
@@ -44,7 +46,9 @@ const PictureInstructions = () => {
           </div>
         </div>
 
-        <button className="try-now-btn">Try Now</button>
+        <Link to="/chatbot">
+          <button className="try-now-btn">Try Now</button>
+        </Link>
       </div>
       <FaqSection />
     </>
